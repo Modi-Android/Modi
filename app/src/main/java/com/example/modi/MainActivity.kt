@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         // 상단 툴바
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        
+
         // 하단 프래그먼트
         var bnv_main = findViewById(R.id.bnv_main) as BottomNavigationView
 
