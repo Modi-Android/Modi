@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/pc/AndroidStudioProjects/Modi/app/src/main/res/layout/activity_info.xml" value="0.19174265450861194" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/Modi/app/src/main/res/layout/activity_main.xml" value="0.19174265450861194" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/Modi/app/src/main/res/menu/navi_menu.xml" value="0.2324074074074074" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/Modi/app/src/main/res/menu/toolbar_menu.xml" value="0.2324074074074074" />
       </map>
     </option>
   </component>
