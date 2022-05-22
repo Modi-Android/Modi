@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.example.modi.Chatting.ChattingFragment
+import com.example.modi.Member.MemberFragment
+import com.example.modi.Project.ProjectFragment
 import com.example.modi.R
-import com.example.projectcollaboration.Board.BoardFragment
-import com.example.projectcollaboration.Chatting.ChattingFragment
-import com.example.projectcollaboration.Project.ProjectFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.first -> {
                     // 다른 프래그먼트 화면으로 이동하는 기능
-                    val boardFragment = BoardFragment()
-                    supportFragmentManager.beginTransaction().replace(R.id.fl_container, boardFragment).commit()
+                    val memberFragment = MemberFragment()
+                    supportFragmentManager.beginTransaction().replace(R.id.fl_container, memberFragment).commit()
                 }
                 R.id.second -> {
                     val projectFragment = ProjectFragment()

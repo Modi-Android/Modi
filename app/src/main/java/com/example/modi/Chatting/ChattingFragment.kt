@@ -1,16 +1,16 @@
-package com.example.projectcollaboration.Project
+package com.example.modi.Chatting
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.projectcollaboration.R
+import com.example.modi.R
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class ProjectFragment : Fragment() {
+class ChattingFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
@@ -26,13 +26,13 @@ class ProjectFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_project, container, false)
+        return inflater.inflate(R.layout.fragment_chatting, container, false)
     }
 
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ProjectFragment().apply {
+            ChattingFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
