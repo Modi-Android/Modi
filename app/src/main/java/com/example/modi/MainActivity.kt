@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         // 하단 프래그먼트
         var bnv_main = findViewById(R.id.bnv_main) as BottomNavigationView
 
-
         bnv_main.run { setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.first -> {
