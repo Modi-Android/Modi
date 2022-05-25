@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+            selectedItemId = R.id.second
         }
     }
 
@@ -63,6 +64,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "정보 이벤트 실행", Toast.LENGTH_LONG).show()
                 return super.onOptionsItemSelected(item)
             }
+            R.id.home -> {
+                Toast.makeText(applicationContext, "뒤로 가기", Toast.LENGTH_LONG).show()
+                finish()
+                return true
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }
