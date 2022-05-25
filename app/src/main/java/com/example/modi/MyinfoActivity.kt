@@ -1,5 +1,7 @@
 package com.example.modi
 
-class MyinfoActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class MyinfoActivity : AppCompatActivity()  {
     // 내 정보
 }

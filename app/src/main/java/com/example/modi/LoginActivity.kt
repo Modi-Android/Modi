@@ -1,5 +1,7 @@
 package com.example.modi
 
-class LoginActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class LoginActivity : AppCompatActivity()  {
     // 로그인시 보여짐
 }

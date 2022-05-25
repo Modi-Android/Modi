@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <ImageView
@@ -34,7 +35,6 @@
         android:layout_marginTop="50dp"
         android:layout_toLeftOf="@id/edit_id"
         android:src="@drawable/ic_launcher_background" />
-
 
     <EditText
         android:id="@+id/edit_id"
