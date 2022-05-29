@@ -1,5 +1,6 @@
-package com.example.projectcollaboration
+package com.example.modi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -8,23 +9,24 @@ import android.widget.Toast
 import com.example.modi.Chatting.ChattingFragment
 import com.example.modi.Member.MemberFragment
 import com.example.modi.Project.ProjectFragment
-import com.example.modi.R
+import com.example.modi.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // 상단 툴바
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setSupportActionBar(binding.toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(false) // 왼쪽버튼 사용 여부
 
         // 하단 프래그먼트
-        var bnv_main = findViewById(R.id.bnv_main) as BottomNavigationView
+        var btn_main = findViewById<BottomNavigationView>(R.id.bnv_main)
 
-        bnv_main.run { setOnNavigationItemSelectedListener {
+        btn_main.run { setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.first -> {
                     // 다른 프래그먼트 화면으로 이동하는 기능
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     // 상단 툴바
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return super.onCreateOptionsMenu(menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -61,8 +63,8 @@ class MainActivity : AppCompatActivity() {
 
             }
             R.id.action_info -> {
-                Toast.makeText(applicationContext, "정보 이벤트 실행", Toast.LENGTH_LONG).show()
-                return super.onOptionsItemSelected(item)
+                val intent = Intent(this, MyinfoActivity::class.java)
+                startActivity(intent)
             }
             R.id.home -> {
                 Toast.makeText(applicationContext, "뒤로 가기", Toast.LENGTH_LONG).show()

@@ -8,12 +8,10 @@
         android:title="게시판"/>
     <item
         android:id="@+id/second"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="프로젝트" />
     <item
         android:id="@+id/third"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="채팅" />

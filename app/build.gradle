@@ -5,6 +5,11 @@ plugins {
 
 android {
     compileSdk 31
+    
+    // 뷰바인딩 선언
+    buildFeatures{
+        viewBinding true
+    }
 
     defaultConfig {
         applicationId "com.example.modi"
@@ -29,7 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    apply plugin: 'kotlin-android-extensions'
+//    // xml 아이디를 액티비티에 바로 적용해서 사용가능
+//    apply plugin: 'kotlin-android-extensions'
+    
 }
 
 dependencies {
