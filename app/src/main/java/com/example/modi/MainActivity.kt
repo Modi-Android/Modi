@@ -60,18 +60,11 @@ class MainActivity : AppCompatActivity() {
             R.id.action_search -> {
                 Toast.makeText(applicationContext, "검색 이벤트 실행", Toast.LENGTH_LONG).show()
                 return super.onOptionsItemSelected(item)
-
             }
             R.id.action_info -> {
                 val intent = Intent(this, MyinfoActivity::class.java)
                 startActivity(intent)
             }
-            R.id.home -> {
-                Toast.makeText(applicationContext, "뒤로 가기", Toast.LENGTH_LONG).show()
-                finish()
-                return true
-            }
-
         }
         return super.onOptionsItemSelected(item)
     }

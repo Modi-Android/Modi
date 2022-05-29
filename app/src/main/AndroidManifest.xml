@@ -12,12 +12,17 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+        </activity>
+        <activity android:name=".MyinfoActivity"/>
+        <activity android:name=".LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUp_emailActivity"/>
+        <activity android:name=".SignUp_infoActivity"/>
     </application>
 
 </manifest>
