@@ -2,6 +2,7 @@ package com.example.modi
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.modi.databinding.ActivityLoginBinding
 
@@ -15,14 +16,17 @@ class LoginActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val btn_Login = findViewById<Button>(R.id.btn_login)
+        val btn_Register = findViewById<Button>(R.id.btn_register)
+
         // 로그인 버튼 클릭시 로그인되면서 메인 액티비티로 전환
-        binding.btnLogin.setOnClickListener { 
+        btn_Login.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         // 회원가입버튼 클릭시 이메일 인증 회원가입 액티비티로 전환
-        binding.btnRegister.setOnClickListener { 
-            val intent = Intent(this, SignUp_emailActivity::class.java)
+        btn_Register.setOnClickListener {
+            val intent = Intent(this, SignUp_infoActivity::class.java)
             startActivity(intent)
         }
         
